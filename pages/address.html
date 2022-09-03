@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>ADDRESS</title>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js' ></script>
+    <script src='https://cdn.jsdelivr.net/gh/vietblogdao/js/districts.min.js' ></script>
+</head>
+
+<body>
+
+    <header>
+
+    </header>
+    <main class="container-fluid row ">
+        <image class='col-md-8 imageseconds' src="../Image/sign-up.jpg" />
+
+        <form class='col-md-4' style='margin-top:10em;padding-left: 7em;'>
+            <h1 for="input-signup" class="col-md-12 col-form-label"
+                style="padding-left: 3em;padding-bottom: 1em; font-family: 'Times New Roman', Times, serif;"> YOUR
+                ADDRESS</h1>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text col-md-12" style="width:10em">Province/City</span>
+                </div>
+                <select name="" id="province">
+                    <option value="-1" > Choose..............</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text col-md-12 " style="width:10em">District</span>
+                </div>
+                <select name="" id="district">
+                    <option value="-1 ">Choose..............</option>
+                </select>
+                <input class="billing_address_1" name="" type="hidden" value="">
+                <input class="billing_address_2" name="" type="hidden" value="">
+                <input class="billing_address_3" name="" type="hidden" value="">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" style="width:10em">Ward</span>
+                </div>
+                <select name="" id="town">
+                    <option value="- 1">hoose..............</option>
+                </select>
+            </div>
+            <div class="form-group row mb-3">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="input-password-confirm" placeholder="Street .....">
+                </div>
+            </div>
+
+            <button type="button" class="col-md-5 btn btn-primary next" id="btn-submit">Next > </button>
+            <button type="button" class="col-md-2 btn btn-primary signin" id="btn-signin">SKIP </button>
+            <p class="infor">By continuing you agree with our Term of Services
+                and Private Policy </p>
+        </form>
+
+    </main>
+
+
+    <script src="../script/data.json"></script>
+    <script src="../script/address.js"></script>
+</body>
+
+</html>
