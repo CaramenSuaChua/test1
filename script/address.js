@@ -65,8 +65,15 @@ document.getElementById('btn-submit').addEventListener('click', function(e){
     window.location.href='../pages/information.html';
 })
 
-document.getElementById('btn-skip').addEventListener('click', function(){
-    window.location.href='../pages/information.html';
+document.getElementById('btn-previous').addEventListener('click', function(){
+    window.location.href='../pages/signup.html';
 })
+
+document.getElementById('btn-next').addEventListener('click', function (e) {
+    e.preventDefault()
+
+    window.location.href = '../pages/information.html';
+})
+
 
 

@@ -159,6 +159,39 @@ const checkMatchConfirm = function(inputPassWord, inputConfirmPass) {
     return false;
 }
 
+/////////////an hien pass 
+const passField = document.querySelector("#input-password");
+const showBtn = document.querySelector("#pass");
+showBtn.onclick = (()=>{
+  if(passField.type === "password"){
+    passField.type = "text";
+    showBtn.classList.add("hide-btn");
+    showBtn.classList.remove("fa-eye-slash");
+    
+
+  }else{
+    passField.type = "password";
+    showBtn.classList.remove("hide-btn");
+    showBtn.classList.add("fa-eye-slash");
+  }
+});
+
+//////////an hien confirm passs 
+const passFieldd = document.querySelector("#input-password-confirm");
+const showBtnn = document.querySelector("#cpass");
+showBtnn.onclick = (()=>{
+  if(passFieldd.type === "password"){
+    passFieldd.type = "text";
+    showBtnn.classList.add("hide-btn");
+    showBtnn.classList.remove("fa-eye-slash");
+  }else{
+    passFieldd.type = "password";
+    showBtnn.classList.remove("hide-btn");
+    showBtnn.classList.add("fa-eye-slash");
+  }
+});
+
+
 btnNext.addEventListener('click', function () {
 
     let isEmpty = checkEmtyBlank([inputFullName, inputEmail, inputPhone, inputPassWord, inputConfirmPass])
@@ -185,4 +218,9 @@ btnNext.addEventListener('click', function () {
     window.location.href = '../pages/address.html';
 })
 
+document.getElementById('btn-next').addEventListener('click', function (e) {
+    e.preventDefault()
+
+    window.location.href = '../pages/address.html';
+})
 

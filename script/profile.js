@@ -188,4 +188,7 @@ updatePass.addEventListener('click', function(e){
     }
     saveToStorage(KEY_PHONE, JSON.stringify(newPassData))
 
+document.getElementById('modal-body').style.display = 'none';
 })
+
+document.getElementById('btn-signup').addEventListener('click', () => window.location.href='../pages/signup.html')

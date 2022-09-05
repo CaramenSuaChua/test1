@@ -22,7 +22,7 @@
     <main class="container-fluid row ">
         <image class='col-md-8 imageseconds' src="../Image/sign-up.jpg" />
 
-        <form class='col-md-4' style='margin-top:10em;padding-left: 7em;'>
+        <form class='col-md-4 ' style='margin-top:10em;padding-left: 7em;'>
             <h1 for="input-signup" class="col-md-12 col-form-label"
                 style="padding-left: 3em;padding-bottom: 1em; font-family: 'Times New Roman', Times, serif;"> YOUR
                 INFORMATION</h1>
@@ -45,9 +45,11 @@
                 <div class=" mb-3 ">
                     <strong class="d-inline-flex">
                         <p class="sex" style="width:10em; margin-left:1em">Giới tính</p>
-                        <p><input class='nam ' name="gender" id ='gendernam' type="radio" value="Nam" style="margin-left:2em">Nam</p>
-                        <p><input class='nu ' name="gender" id ='gendernu' type="radio" value="Nữ"  style="margin-left:2em">Nữ</p>
-    
+                        <p><input class='nam ' name="gender" id='gendernam' type="radio" value="Male"
+                                style="margin-left:2em">Male</p>
+                        <p><input class='nu ' name="gender" id='gendernu' type="radio" value="Female"
+                                style="margin-left:2em">Female</p>
+
                     </strong>
                 </div>
             </div>
@@ -78,10 +80,10 @@
                     <option>Video games </option>
                 </select>
             </div>
-            <button type="button" class="col-md-5 btn btn-primary complete" id="btn-complete"
-                style="margin-left:7em" >Complete > </button>
-            <p class="infor">By continuing you agree with our Term of Services
-                and Private Policy </p>
+            <button type="button" class="col-md-4 btn btn-primary signin" id="btn-previous"> < Previous </button>
+            <button type="button" class="col-md-5 btn btn-primary complete" id="btn-complete"> Complete >  </button>
+            <p class="infor">By continuing you agree with our <a href='#'>Term of Services </a>
+                and <a href='#'>Private Policy</a> </p>
         </form>
 
     </main>

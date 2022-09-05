@@ -8,16 +8,16 @@ const inputHobies = document.getElementById('input-hobbies');
 const KEY_INFOR = 'dataInfor';
 let dataInfor = JSON.parse(getFromStorage(KEY_INFOR)) ?? [];
 
-// let file; 
-// inputFile.addEventListener('change', (event) => {
-//     console.log(event.target)
-//     const fileInput = event.target.files[0];
-//     file = fileInput.name
-//     console.log(fileInput)
-//     inputFileName.textContent = fileInput.name
-//     console.log(file)
-//     }
-// )
+let file; 
+inputFile.addEventListener('change', (event) => {
+    console.log(event.target)
+    const fileInput = event.target.files[0];
+    file = fileInput.name
+    console.log(fileInput)
+    inputFileName.textContent = fileInput.name
+    console.log(file)
+    }
+)
 
 
 function butotnClick() {
@@ -31,6 +31,7 @@ function butotnClick() {
         console.log('size: ' + files[i].size);
         console.log('type: ' + files[i].type);
     }
+
 }
 
 
@@ -56,7 +57,7 @@ document.getElementById('btn-complete').addEventListener('click', function (e) {
     }
     checkGender(e)
     console.log(dataInfor)
-    // saveToStorage(KEY_INFOR, JSON.stringify(dataInfor))
+    saveToStorage(KEY_INFOR, JSON.stringify(dataInfor))
 
     const imgPath = document.querySelector('input[type=file]').files[0];
     const reader = new FileReader();
@@ -74,3 +75,6 @@ document.getElementById('btn-complete').addEventListener('click', function (e) {
     window.location.href = '../pages/profile.html'
 })
 
+document.getElementById('btn-previous').addEventListener('click', function(){
+    window.location.href='../pages/address.html';
+})

@@ -66,17 +66,19 @@
         </section>
 
         <div class="col-md-12 col-md-6 col-xs-12 col-sm-12 row ">
+            <button class="button4" id="btn-signup">Sign up</button>
+            <button class="button4" id="home">Home Page</button>
             <button type="button" class="button4" data-toggle="modal" data-target="#exampleModal" id="changePass">Change
                 Password</button>
-            <button class="button4" id="home">Home Page</button>
+
         </div>
-        <Modal class="modal" id='formPass' style="display:none">
+        <!-- <Modal class="modal" id='formPass' style="display:none"> --> 
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                            <h5  type="button" class="modal-title" id="exampleModalLabel" data-toggle="modal" data-target="#exampleModal">Change Password</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -111,14 +113,14 @@
                             </div>
                         </div>
                         <div class="modal-footer row">
-                           
                             <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-top:10%" id="close">Close</button>
-                            <button type="button" class="btn btn-primary" id="updatePass">Save changes</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="updatePass">Save changes</button>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </Modal>
+        <!-- </Modal> -->
 
 
     </div>

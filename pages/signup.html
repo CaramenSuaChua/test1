@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="../css/style.css">
     <title>SIGN UP</title>
 </head>
@@ -20,12 +21,13 @@
     <main class="container-fluid ">
         <image class='col-md-8 imagefirst' src="../Image/sign-up.jpg" />
         <form class='col-md-4' style='margin-top:10em;padding-left: 7em;'>
-            <h1 for="input-signup" class="col-md-12 col-form-label" style="padding-left: 3em;padding-bottom: 1em; font-family: 'Times New Roman', Times, serif;"> SIGN
+            <h1 for="input-signup" class="col-md-12 col-form-label"
+                style="padding-left: 3em;padding-bottom: 1em; font-family: 'Times New Roman', Times, serif;"> SIGN
                 UP</h1>
             <div class="form-group row ">
                 <label for="input-name" class="col-sm-5 col-form-label">Full Name :</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="input-fullname" placeholder="Input Full Name" >
+                    <input type="text" class="form-control" id="input-fullname" placeholder="Input Full Name">
                     <small></small>
                     <span></span>
                 </div>
@@ -33,7 +35,7 @@
             <div class="form-group row mb-3">
                 <label for="input-email" class="col-sm-5 col-form-label">Email :</label>
                 <div class="col-sm-9">
-                    <input type="text" class="form-control" id="input-email" placeholder="Input Email" >
+                    <input type="text" class="form-control" id="input-email" placeholder="Input Email">
                     <small></small>
                     <span></span>
                 </div>
@@ -41,35 +43,38 @@
             <div class="form-group row mb-3">
                 <label for="input-phone" class="col-sm-5 col-form-label"> Phone Number :</label>
                 <div class="col-sm-9">
-                    <input type="Phone Number" class="form-control" id="input-PhoneNumber"
+                    <input type="Phone Number" class="form-control test" id="input-PhoneNumber"
                         placeholder="Input Phone Number" required>
-                        <small></small>
-                        <span></span>
+                    <small></small>
+                    <span></span>
                 </div>
             </div>
             <div class="form-group row mb-3">
                 <label for="input-name" class="col-sm-5 col-form-label">Password :</label>
-                <div class="col-sm-9">
+                <div class=" container col-sm-9">
                     <input type="password" class="form-control" id="input-password" placeholder="Input Password"
-                        required invisible>
-                        <small></small>
-                        <span></span>
+                        required >
+                    <span  class="show-btn"><i id='pass' class="fas fa-eye fa-eye-slash "> </i></span>
+                    <small></small>
+                    <span></span>
                 </div>
             </div>
             <div class="form-group row mb-3">
                 <label for="input-name" class="col-sm-5 col-form-label">Confirm Password :</label>
-                <div class="col-sm-9">
+                <div class="container col-sm-9">
                     <input type="password" class="form-control" id="input-password-confirm" placeholder="Input Password"
-                        required invisible>
-                        <small></small>
-                        <span></span>
+                        required >
+                    <span  class="show-btn"><i id='cpass' class="fas fa-eye fa-eye-slash "></i></span>
+                    <small></small>
+                    <span></span>
                 </div>
             </div>
-            
+
             <button type="button" class="col-md-5 btn btn-primary next" id="btn-submit">Next > </button>
             <button type="button" class="col-md-2 btn btn-primary signin" id="btn-signin">Sign In > </button>
-            <p class="infor">By continuing you agree with our Term of Services
-                and Private Policy </p>
+            <button type="button" class="col-md-9 btn btn-primary signin" id="btn-next">Skip > </button>
+            <p class="infor">By continuing you agree with our <a href='#' >Term of Services </a>
+                and <a href='#' >Private Policy</a> </p>
         </form>
 
     </main>
