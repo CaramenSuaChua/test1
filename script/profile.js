@@ -36,7 +36,10 @@ inputGender.textContent = dataInfor.inputGender
 inputHobbies.textContent = dataInfor.inputHobies 
 // inputImage.src = dataInfor.inputFile
 // let img = document.getElementById('image');
-inputImage.src = localStorage.getItem('image');
+if (dataInfor.inputFile !== '') {
+    inputImage.src = localStorage.getItem('image');
+}
+
 inputAddress.textContent = `${dataAddress.addressStreet }, ${dataAddress.addressTown} ,  ${dataAddress.addressDistrict}, ${dataAddress.addressProvince}   ` 
 
 
@@ -192,3 +195,5 @@ document.getElementById('modal-body').style.display = 'none';
 })
 
 document.getElementById('btn-signup').addEventListener('click', () => window.location.href='../pages/signup.html')
+document.getElementById('btn-previous').addEventListener('click', () => window.location.href='../pages/information.html')
+
