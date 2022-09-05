@@ -7,8 +7,14 @@ const inputPhone = document.getElementById('input-PhoneNumber')
 const inputPassWord = document.getElementById('input-password')
 const inputConfirmPass = document.getElementById('input-password-confirm');
 
+
+const KEY_PHONE = 'dataPer';
+let dataPer = JSON.parse(getFromStorage(KEY_PHONE)) ?? [];
+
+
 /////loi /////////
 const showError = function (input, message) {
+    console.log(input)
     let parent = input.parentElement;
     let small = parent.querySelector('small');
     parent.classList.add('error');
@@ -156,6 +162,17 @@ const checkMatchConfirm = function(inputPassWord, inputConfirmPass) {
 btnNext.addEventListener('click', function () {
 
     let isEmpty = checkEmtyBlank([inputFullName, inputEmail, inputPhone, inputPassWord, inputConfirmPass])
+    
+    
+    const dataPerson = { 
+        inputFullName: inputFullName.value, 
+        inputEmail: inputEmail.value,
+        inputPhone: inputPhone.value,
+        inputPassWord: inputPassWord.value
+    }
+    saveToStorage(KEY_PHONE, JSON.stringify(dataPerson) )
+    // localStorage.setItem(data)
+    // console.log(data)
 
     if(!isEmpty) {
         let isEMail = checkEMail(inputEmail)

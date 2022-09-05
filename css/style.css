@@ -40,13 +40,15 @@ span {
     margin-left: 2em;
 }
 h6{
-    margin: 5%;
+    margin-bottom: 2%;
+    padding-bottom: 5%;
 }
+
 section {
     margin-top:10em;
     margin-left: 9em;
 }
- h5{
+h5{
      margin-bottom: 1em;
  }
 .button4 {
@@ -57,5 +59,19 @@ section {
     margin-left: 10em;
     padding:0.5em;
 }
+
+
+/* #formPass {
+    font-weight: bold;
+    margin-top: 10%;
+    margin-left: 30%;
+    border: 105em;
+    border-radius: 3%;
+    width: 50em;
+    height: 30em;
+   background-color: aqua;
+} */
+
+
 /* //////////// */
 

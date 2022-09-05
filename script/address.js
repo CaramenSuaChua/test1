@@ -35,8 +35,38 @@ $(function () {
      apiProvince(prodvince);
 })
 
+const addressProvince = document.getElementById('province')
+const addressDistrict = document.getElementById('district')
+const addressTown = document.getElementById('town')
+const addressStreet = document.getElementById('street')
+
+const KEY_ADDRESS = 'dataAddress'
+let dataAddress = JSON.parse(getFromStorage(KEY_ADDRESS)) ?? []
+
 document.getElementById('btn-submit').addEventListener('click', function(e){
     e.preventDefault()
 
+    var dataRecord = JSON.parse(data)
+    e.preventDefault()
+    var mySelectedProvince = dataRecord.find(x => x.code == addressProvince.value);
+    var mySelectedDistrict = mySelectedProvince.districts.find(x => x.code == addressDistrict.value);
+    var mySelectedTown = mySelectedDistrict.wards.find(x => x.code == addressTown.value);
+
+    const dataAddress = {
+        addressProvince:mySelectedProvince.name,
+        addressDistrict:mySelectedDistrict.name,
+        addressTown: mySelectedTown.name,
+        addressStreet:addressStreet.value
+    }
+
+    saveToStorage(KEY_ADDRESS, JSON.stringify(dataAddress) )
+    console.log(dataAddress)
+
     window.location.href='../pages/information.html';
 })
+
+document.getElementById('btn-skip').addEventListener('click', function(){
+    window.location.href='../pages/information.html';
+})
+
+

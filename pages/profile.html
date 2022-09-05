@@ -23,21 +23,22 @@
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-2 mb-5 mb-lg-0 wow anh fadeIn">
                 <div class="card border-0 shadow">
-                    <img src="https://www.bootdey.com/img/Content/avatar/avatar6.png" alt="...">
+                    <img style='overflow:hidden; height: 300px;' id='newImage'
+                        src="https://www.bootdey.com/img/Content/avatar/avatar6.png" alt="...">
                 </div>
             </div>
             <div class="col-lg-8">
                 <div class="ps-lg-1-6 ps-xl-5">
                     <div class="mb-5 wow fadeIn textt">
-                        <div class="text-start mb-1-6 wow fadeIn">
-                            <h6 class="h4 mb-0 ">Hi, <FullName>
-                            </h6>
+                        <div class="text-start mb-9 wow fadeIn row">
+                            <h6 class="h4 mb-0 " style="margin-left:3%">Hi , </h6>
+                            <h6 class='h4 mb-0' id='newName' style="text-transform: uppercase;"> </h6>
                         </div>
                         <div class="text-start mb-1-6 wow fadeIn">
-                            <h6 class="h4 mb-0 ">example@gmail.com</h6>
+                            <h6 class="h4 mb-0 " id='newEmail' style="margin-left:2%">example@gmail.com</h6>
                         </div>
                         <div class="text-start mb-1-6 wow fadeIn">
-                            <h6 class="h4 mb-0 ">Age:24</h6>
+                            <h6 class="h4 mb-0 " style="margin-left:2%">Age:24</h6>
                         </div>
                     </div>
                 </div>
@@ -45,18 +46,86 @@
         </div>
 
 
-        <section class="col-md-6">
-            <h5>Phone:</h5>
-            <h5>Gender:</h5>
-            <h5>Address:</h5>
-            <h5>Hobbies:</h5>
+        <section class="col-md-6 ">
+            <div class="row">
+                <h5> Phone : </h5>
+                <h5 id='newPhone' style="margin-left: 5%;"> </h5>
+            </div>
+            <div class="row">
+                <h5>Gender : </h5>
+                <h5 id='newGender' style="margin-left: 4%;"> </h5>
+            </div>
+            <div class="row">
+                <h5>Address :</h5>
+                <h5 id='newAddress' style="margin-left: 3%;"> </h5>
+            </div>
+            <div class="row">
+                <h5>Hobbies :</h5>
+                <h5 id='newHobbies' style="margin-left: 3%;"> </h5>
+            </div>
         </section>
 
         <div class="col-md-12 col-md-6 col-xs-12 col-sm-12 row ">
-            <button class="button4">Change Password</button>
-            <button class="button4">Home Page</button>
+            <button type="button" class="button4" data-toggle="modal" data-target="#exampleModal" id="changePass">Change
+                Password</button>
+            <button class="button4" id="home">Home Page</button>
         </div>
+        <Modal class="modal" id='formPass' style="display:none">
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group row mb-3">
+                                <label for="input-pass" class="col-sm-5 col-form-label">Current Password :</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="current-password"
+                                        placeholder="Input Password">
+                                    <small></small>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="input-name" class="col-sm-5 col-form-label">New Password :</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="new-password"
+                                        placeholder="Input Password">
+                                    <small></small>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="input-name" class="col-sm-5 col-form-label">Confirm New Password :</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" id="confirm-new-password"
+                                        placeholder="Input Password">
+                                    <small></small>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer row">
+                           
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" style="margin-top:10%" id="close">Close</button>
+                            <button type="button" class="btn btn-primary" id="updatePass">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Modal>
+
+
     </div>
+
+    <script src="../script/data.json"></script>
+    <script src="../script/localStorage.js"></script>
+    <script src="../script/profile.js"></script>
 </body>
 
 </html>

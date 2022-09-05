@@ -27,23 +27,29 @@
                 style="padding-left: 3em;padding-bottom: 1em; font-family: 'Times New Roman', Times, serif;"> YOUR
                 INFORMATION</h1>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text col-md-12" style="width:10em">Avatar</span>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text col-md-12" style="width:10em">Avatar</span>
+                    </div>
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input " id="inputfile" accept=".jpg, .jpeg, .png">
+                        <label class="custom-file-label" id="inputfilename">Choose file</label>
+                    </div>
                 </div>
-
-                <input type="file" id="fileBox" value='Choose...' multiple>
-                <input type="button" value="Browser" id="checkButton">
 
                 <!-- <div class="input-group-prepend">
                     <span class="input-group-text col-md-12" style="width:10em">Browser</span>
                 </div> -->
             </div>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text col-md-12" style="width:10em">Giới tính</span>
+                <div class=" mb-3 ">
+                    <strong class="d-inline-flex">
+                        <p class="sex" style="width:10em; margin-left:1em">Giới tính</p>
+                        <p><input class='nam ' name="gender" id ='gendernam' type="radio" value="Nam" style="margin-left:2em">Nam</p>
+                        <p><input class='nu ' name="gender" id ='gendernu' type="radio" value="Nữ"  style="margin-left:2em">Nữ</p>
+    
+                    </strong>
                 </div>
-                <p><input class='nam ' type="radio">Nam </p>
-                <p><input class='nu ' type="radio">Nữ </p>
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -73,7 +79,7 @@
                 </select>
             </div>
             <button type="button" class="col-md-5 btn btn-primary complete" id="btn-complete"
-                style="margin-left:7em">Complete > </button>
+                style="margin-left:7em" >Complete > </button>
             <p class="infor">By continuing you agree with our Term of Services
                 and Private Policy </p>
         </form>
@@ -81,7 +87,7 @@
     </main>
 
 
-
+    <script src="../script/localStorage.js"></script>
     <script src="../script/information.js"></script>
 </body>
 
